@@ -1,0 +1,3 @@
+[submodule "bbb-video-download"]
+	path = bbb-video-download
+	url = https://github.com/odairmario/bbb-video-download.git
