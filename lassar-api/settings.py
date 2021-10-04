@@ -159,7 +159,9 @@ CELERY_TIMEZONE = 'UTC'
 
 # Video Processor
 VIDEO_PROCESSOR_PATH = os.environ.get("VIDEO_PROCESSOR_PATH","/home/app/bbb-video-download/index.js")
+VIDEO_PROCESSOR_THREADS = os.environ.get("VIDEO_PROCESSOR_THREADS",4)
 RECORDS_PATH = os.environ.get("RECORDS_PATH","")
+
 
 # Channels configs
 ASGI_APPLICATION = 'bbbrecord_api.asgi.application'

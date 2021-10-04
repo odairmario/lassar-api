@@ -9,7 +9,8 @@ import requests
 from asgiref.sync import async_to_sync
 from bbbrecord_api.celery import app
 from bbbrecord_api.settings import (MEDIA_ROOT, RECORDS_PATH,
-                                    VIDEO_PROCESSOR_PATH)
+                                    VIDEO_PROCESSOR_PATH,
+                                    VIDEO_PROCESSOR_THREADS)
 from celery import shared_task
 from channels.layers import get_channel_layer
 from django.http import JsonResponse
@@ -42,7 +43,7 @@ def process_video(processor_path,meeting_path,video_output):
     process a video
     """
     output_video_path = os.path.join(video_output,"{}.mp4".format(time.time()))
-    cmd = "node {} -i {} -o {}".format(processor_path, meeting_path,output_video_path)
+    cmd = "node {} -i {} -t {} -o {}".format(processor_path,VIDEO_PROCESSOR_THREADS, meeting_path,output_video_path)
     with sp.Popen(cmd.split()) as process:
         process.wait()
 
