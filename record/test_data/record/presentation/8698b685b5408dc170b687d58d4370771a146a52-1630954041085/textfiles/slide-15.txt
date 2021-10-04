@@ -1,0 +1,13 @@
+15
+O artigo (Leis et al., 2014) apresenta um modelo de execução paralelo de granularidade
+fina, no qual os dados são divididos em pequenos fragmentos, chamado de morsels e cada
+fragmentado é relacionado à uma threads que vai executar em determinado nodo NUMA. A
+figura 2.3, elaborado pelos autores do artigo (Leis et al., 2014) exemplifica o modelo de execução
+em morsel, no qual o dispatcher separa os dados em morsel e atribuí para uma threads em
+determinado nodo NUMA, após a execução os fragmentos são reunidos novamente para formar a
+saída.
+Figura 2.3: Diagrama do modelo de execução em morsel , retirado do artigo (Leis et al., 2014)
+O artigo (Srinivasa e Sosonkina, 2012) apresenta uma solução, no qual identifica blocos
+de memória com afinidade a determinada thread e fixa o bloco no banco de memória do nodo
+NUMA da thread com afinidade. A identificação dos blocos de memória com afinidade as
+threads é feita com base na classificação dos acessos determinismo e não determinismo.

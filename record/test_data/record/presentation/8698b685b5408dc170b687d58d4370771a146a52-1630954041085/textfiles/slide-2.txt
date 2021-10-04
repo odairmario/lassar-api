@@ -1,0 +1,7 @@
+RESUMO
+A arquitetura NUMA consiste em um modelo multiprocessadores com diferentes
+velocidade de acesso aos bancos de memória, dado essa característica surge o efeito NUMA.
+Bancos de dados relacionas em memória faz uso intensivo da memória principal do servidor e
+por isso é afetado pelo efeito NUMA. Este trabalho apresenta um algoritmo flexível que tem
+como objetivo minimizar o efeito NUMA nos bancos de dados.
+Palavras-chave: Palavra-chave 1. Palavra-chave 2. Palavra-chave 3.

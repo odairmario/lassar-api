@@ -1,0 +1,17 @@
+14
+O MonetDB armazena cada coluna em um arquivo separado, do tipo bat, cada arquivo
+possui dois valores por linha, o primeiro é o UID da coluna e o segundo é o valor da coluna (Idreos
+et al., 2012). Essa organização permite o MonetDB carregue grande parte de uma determinada
+coluna em memória contígua, que favorece o uso de cache l2 e l1, tornando eficiente para
+operações sobre coluna como média ou soma. No entanto operações como Update se torna um
+pouco custoso pois o SGDB precisará carregar múltiplas colunas para poder fazer a atualização.
+As tabelas do MonetDB são persistidas em disco e conforme utilizadas é mantida
+em memória, tornando o acesso mais rápido após o segundo uso. As consultas podem ser
+paralelizadas no nível intra-query com uso de threads. O efeito NUMA é significativo no
+MonetDB devido ao seu uso de memória e threads.
+2.2 TRABALHOS RELACIONADOS
+O artigo (Dominico et al., 2018) apresenta uma solução para NUMA aware em bancos
+de dados relacional OLAP, baseado em rede de PetriNet, no qual a utilização de recursos e decide
+em que nodo NUMA será alocado. A figura 2.2 elaborado pelos autores do artigo (Dominico
+et al., 2018) exemplifica o funcionamento da rede de Petri.
+Figura 2.2: Representação da rede de Petri, retirado do artigo (Dominico et al., 2018)

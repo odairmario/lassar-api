@@ -1,0 +1,12 @@
+12
+2 FUNDAMENTAÇÃO TEÓRICA
+2.1 ARQUITETURA NUMA
+A arquitetura NUMA (Non Uniform Memory Access) é uma arquitetura de multipro-
+cessadores, em que cada processador possui sua própria memória DRAM. A memória DRAM
+Dynamic Random-Access Memory de cada processador podem ser interligada entre si por uma
+interconexão, permitindo que um processador busque dados na memória de outro processador. A
+arquitetura NUMA pode ser representada pelo seguinte diagrama: 2.1
+Figura 2.1: Representação da arquitetura NUMA
+A figura 2.1 mostra uma arquitetura NUMA, no qual possui 4 processadores, cada um
+com 3 cores e sua própria memória DRAM. O conjunto de processador e memória DRAM é
+chamado de nodo NUMA, os nodos NUMA são interligados entre si por uma interconexão, a

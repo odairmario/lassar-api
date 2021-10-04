@@ -1,0 +1,37 @@
+13
+figura 2.1 representa a interconexão com a linha bidirecional tracejada. Quando um processador
+acessa a memória do seu noda,representado em 2.1 pela linha bidirecional continua o é chamado
+de acesso local, enquanto que o acesso de memória diferente do nodo do processador é chamado
+de acesso remoto.
+Interconexão entre os nodos NUMA possui uma latência maior que a conexão entre
+processador e memória local (Lameter, 2013). Essa diferença é agravada quando não existe
+conexão entre dois nodos, por exemplo na figura 2.1 não tem uma conexão direta entre os nodos
+1 e 4, para o processador acessar uma região de memória mapeada no nodo 4 é necessário passar
+pela conexão do 1->2 e 2->3, se a latência de acesso local for 1ms e acesso remoto for 10ms, no
+caso do exemplo a latência seria 20ms. Portanto a organização dos dados em memórias impacta
+no desempenho das aplicações, o melhor caso de organização é de todos os acessos a memória
+sejam local, mas isso não é possível devido a limitação de tamanho da memória e também limita
+a quantidade de tarefas simultâneas por aplicação, no caso limita-se pela quantidade de cores de
+cada processador.
+2.1.1 Efeito NUMA
+O efeito NUMA é quando o processador faz acesso remoto a outros nodos NUMA,
+aumentando a latência de processador->memória. Os sistemas operacionais possuem políticas
+para evitar que um espaço de memória do processo x seja alocado no nodo 1 enquanto que o
+processo está em execução no nodo 0 (Lameter, 2013), mas essa política, no linux, possui alguns
+entraves como o algoritmo de balanceamento de carga e quando o processo possui mais threads
+do que cores disponíveis em um único nodo NUMA da máquina.
+O kernel linux, possui desde a versão 3.8 (Lameter, 2013), mecanismo para lidar com
+arquitetura numa de forma eficiente, como por exemplo ele sempre tenta alocar memória no
+mesmo nodo numa que o processo está em execução. Mas quando o processo possui mais threads
+ativas do que a quantidade de cores do nodo numa, essas threads serão distribuídas entre os
+outros nodos NUMA e a memória do processo permanece no nodo 1, enquanto que as threads
+estão espalhadas entres todos os nodos, o que implica que as threads irão fazer acesso remoto e o
+desempenho da aplicação vai ser reduzido.
+Nos bancos de dados o efeito NUMA é agravado, devido a natureza da aplicação. Como
+visto no gráfico: , o desempenho do SGDB MonetDB é superior quando todas as suas threads
+estão no mesmo nodo, como demonstrado na figura 1.2.
+2.1.2 MonetDB
+O MonetDB é um gerenciador de banco de dados relacional baseado em memória com
+armazenamento colunar, ou seja a organização interna do armazenamento é feito por coluna e
+não por linha. O MonetDB foi projetado para aplicações de data warehouse e OLAP (Idreos
+et al., 2012).

@@ -1,0 +1,18 @@
+28
+REFERÊNCIAS
+Dominico, S., de Almeida, E. C., Meira, J. A. e Alves, M. A. (2018). An elastic multi-core
+allocation mechanism for database systems. Em 2018 IEEE 34th International Conference on
+Data Engineering (ICDE), páginas 473–484.
+Idreos, S., Groffen, F., Nes, N., Manegold, S., Mullender, S. e Kersten, M. (2012). Monetdb:
+Two decades of research in column-oriented database architectures. IEEE Data Eng. Bull., 35.
+Lameter, C. (2013). Numa (non-uniform memory access): An overview: Numa becomes more
+common because memory controllers get close to execution units on microprocessors. Queue,
+11(7):40–51.
+Leis, V., Boncz, P., Kemper, A. e Neumann, T. (2014). Morsel-driven parallelism: A numa-aware
+query evaluation framework for the many-core age. Em Proceedings of the 2014 ACM SIGMOD
+International Conference on Management of Data, SIGMOD ’14, página 743–754, New York,
+NY, USA. Association for Computing Machinery.
+Poess, M. e Nambiar, R. (2010). Tpc benchmark h standard specification.
+Srinivasa, A. e Sosonkina, M. (2012). Nonuniform memory affinity strategy in multithreaded
+sparse matrix computations. Em Proceedings of the 2012 Symposium on High Performance
+Computing, HPC ’12, San Diego, CA, USA. Society for Computer Simulation International.

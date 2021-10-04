@@ -1,0 +1,18 @@
+17
+Figura 3.1: Fluxograma do escalonador
+3.1 DETALHES DE IMPLEMENTAÇÃO
+Calculo da semelhança Foi utilizado o índice de similaridade de jaccard 3.1 para determinar
+a similaridade entre duas tarefas.
+Seja ti e tj duas tarefas, a fórmula de jaccard pode ser definida como:
+Si,j =
+|M(ti) ∩ M(tj)|
+|M(ti) ∪ M(tj)|
+(3.1)
+Onde:
+Si,j : é a semelhança da tarefa ti e tarefa tj .
+M : é conjunto de endereços de memória e M(ti é o conjunto de memória da tarefa ti
+3.1.1 Algoritmos implementados
+Os pontos mais relevantes da implementação serão apresentados e discutidos, como a
+função principal e a função de adição de tarefas, a função de remoção de tarefas da estrutura de
+dados do escalonado não será discutido neste trabalho, por ser algo trivial, consiste apenas em
+remover da fila de prioridade.

@@ -1,0 +1,12 @@
+ODAIR MARIO DITKUN JUNIOR
+MODELO DE ESCALONAMENTO DE TAREFAS PARA GERENCIADORES DE BANCOS
+DE DADOS EM ARQUITETURA NUMA
+(versão pré-defesa, compilada em 19 de agosto de 2021)
+Trabalho apresentado como requisito parcial à conclusão
+do Curso de Bacharelado em Ciência da Computação,
+Setor de Ciências Exatas, da Universidade Federal do
+Paraná.
+Área de concentração: Ciência da Computação.
+Orientador: Eduardo C. de Almeida.
+CURITIBA PR
+2021

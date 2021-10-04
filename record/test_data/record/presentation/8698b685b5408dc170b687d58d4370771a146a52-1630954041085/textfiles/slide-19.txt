@@ -1,0 +1,34 @@
+19
+As maiorias das estruturas utilizadas são conjuntos de dados, a estrutura que mais difere é o da
+variável Si do algoritmo 2, que é uma fila de prioridade, implementado como uma heap.
+3.2 ESTRATÉGIAS DE SELEÇÃO DE NODO NUMA
+A segunda parte do algoritmo 3 define que é necessário uma estratégia para escolher
+qual nodo NUMA é o mais adequado para a tarefa. A estratégia recebe como parâmetro uma
+tarefa t e o conjunto de tarefas já escalonada pelo algoritmo T e deve devolver um nodo preferido,
+dessa forma é possível implementar múltiplas estratégia, que permite maior flexibilidade do
+algoritmo.
+Foram elaborados duas estratégia, a primeira com abordagem gulosa e a segunda
+seleciona o nodo no qual possui mais tarefas semelhantes
+Estratégia gulosa A estratégia gulosa consiste em escolher o nodo, no qual reside a tarefa com
+maior similaridade com a tarefa a ser adicionada. É possível fórmula a estratégia como:
+nodo = Nodos(max
+tj ∈T
+S(tj,ti)) (3.2)
+Onde
+S(tj,ti) é o calculo da semelhança da tarefa tj e ti.
+Nodos(t) é o nodo que está alocado a tarefa t, no caso a tarefa com maior semelhança.
+Estratégia do nodo correspondente A estrategia de nodo correspondente consiste em escolher
+o nodo no qual reside a maior quantidade de tarefas que a semelhança com a tarefa ser alocado
+seja maior ou igual a um limite definido na inicialização do programa.
+3.3 POLÍTICAS DE BALANCEAMENTO DE CARGA
+A escolha de um nodo preferido com base em umas das estrategias definida em 3.2
+não garante que a tarefa será alocada no nodo escolhido, isso se deve devido ao fato de que a
+estratégia pode alocar todas as tarefas para o mesmo nodos, sobrecarregando um nodo enquanto
+os outros nodos estão ociosos. Portanto é necessário se ter um balanceamento de carga para evitar
+sobrecarga do nodo NUMA, que pode gerar uma performance inferior do que com NUMA aware.
+política de balanceamento de carga Denso A política de balanceamento de carga Denso
+consiste em preencher os nodos NUMAS com tarefas antes de partir para o próximo nodo. A
+ideia desse balanceamento é aglutinar o maior número de tarefas no menor número de NUMA
+nodo sem extrapolar a quantidade de núcleos de cada nodo. E portanto reduzir o acesso remoto,
+mas esse modelo possui os seus problemas, visto que não surte efeito quando o banco de dados
+utilizar todos os núcleo do servidor.

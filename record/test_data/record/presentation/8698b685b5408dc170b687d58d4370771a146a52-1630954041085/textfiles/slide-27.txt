@@ -1,0 +1,24 @@
+27
+6 CONCLUSÃO
+O efeito NUMA acontece quando o servidor em arquitetura NUMA não escalona as
+tarefas levando em conta os nodos NUMA, gerando aumento de acesso à memória remota. O
+presente trabalho apresenta uma proposta que tem como objetivo minimizar o efeito NUMA
+em bancos de dados relacionais em memória, foi utilizado o banco de dados MonetDB para os
+experimentos.
+A proposta apresentada consiste de um algoritmo genérico e flexível que escalona as
+tarefas do banco de dados com base no cálculo da semelhança dos endereços de memória das
+threads existentes. Os resultados foram positivos, apresentando melhora significativa melhora
+no desempenho do benchmark TPC-H. Foi observado que dependendo do tipo de execução a
+política de balanceamento de carga influencia diretamente no desempenho, como demostrado
+em 5.1 que a política densa apresentou uma piora nos testes sequências enquanto que nos testes
+paralelos foi o melhor.
+6.1 TRABALHOS FUTUROS
+O algoritmo proposto não permite mudança em tempo de execução das estratégia de
+escolha de nodo NUMA e da política de balanceamento, então uma possível sugestão de trabalhos
+futuros seria tornar o algoritmo adaptativo que conforme a característica de execução do banco
+de dados muda a política de balanceamento de denso para esparso. Por exemplo, se o algoritmo
+identificar que o banco de dados está executando apenas consultas sequências utilizar a política
+densa enquanto que se estiver executando múltiplas consultas alternar para política esparso.
+Os testes foram feitos somente no banco de dados MonetDB, dado sua característica de
+ser em memória, fica como sugestão testar e avaliar o desempenho dos algoritmos em banco de
+dados não colunar ou que não faz uso extensivo da memória principal.

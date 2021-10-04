@@ -1,0 +1,37 @@
+22
+4.2 BENCHMARK TPC-H
+O TPCH-H é um benchmark de apoio de decisão, no qual consiste em um conjunto de
+consultas OLAP(Poess e Nambiar, 2010). O benchmark é constituído de uma base de dados com
+diferentes escalas e de um conjunto de 22 consultas que visam avaliar o desempenho do banco de
+dados para consultas OLAP. As métricas são geradas a partir de dois testes do benchmark, o
+power test e throughput test.
+Power test O power test consiste na execução sequencial das 22 consultas do benchmark, em
+determinada ordem definida na especificação do TPC-H (Poess e Nambiar, 2010). Os resultados
+do power test são utilizado pelo TPC-H para computar a capacidade de processamento de
+consultas únicas, os resultados são agregados em uma fórmula que avalia a capacidade do banco
+de dados definido em:
+TPC − HPower@Size =
+3600 ∗ SF
+24
+qÎ22
+i=1 QI(i,0) ∗
+Î2
+j=1 RI(j,0)
+(4.1)
+Onde:
+QI(i,0) : é o tempo de execução, em segundos, da query i, e 0 é a ordem de execução, definido
+no apêndice da especificação do tpch (Poess e Nambiar, 2010).
+RI(j,0) : É a função de atualização de dados, no qual j é o número da função e 0 a ordem de
+execução.
+Size : É o tamanho da base de dados definido na especificação do TPC-H
+Throughput test O Throughput test consiste na execução paralela das consultas, o objetivo
+é avaliar a capacidade do banco de dados de lidar com múltiplas transações simultâneas . A
+métrica gerada por esse teste é definido pela equação:
+TPC − HThroughput@Size =
+S ∗ 22 ∗ 3600
+Ts
+∗ SiZE (4.2)
+Onde:
+S É a quantidade de execuções paralelas, referida como stream
+Ts é o tempo total de execução de todas stream
+Size : É o tamanho da base de dados definido na especificação do TPC-H

@@ -1,0 +1,28 @@
+16
+3 PROPOSTA
+A proposta apresentada neste trabalho consiste em um algoritmo genérico capaz de
+receber um conjunto de tarefas do sistema operacional e determinar a melhor distribuição das
+tarefas nos nodos NUMAS. O algoritmo tem como princípios ser genérico, flexível e adaptável.
+E por isso é dividido em etapas e cada etapa permite modificações, como alteração de políticas de
+escalonamento, múltiplas formas de coleta informações das tarefas ativas e também o método de
+atribuir as tarefas no nodo. O algoritmo foi dividido em 3 etapas, para auxiliar na compreensão
+do seu funcionamento, são elas:
+Etapa 1: Coleta de dados A primeira etapa do algoritmo consiste em um método de coletar
+as tarefas ativas do banco de dados, no diagrama 3.1 é representado pelo número 2. A saída
+dessa etapa deve ser uma lista de identificação de cada tarefa, no caso do linux o PID.
+Etapa 2: Escolha do nodo preferido A segunda etapa consiste em comparar os endereços de
+memória de cada tarefa coletada na etapa anterior 3 com os bancos de tarefas já escalonado, e
+com base na comparação escolher um nodo como preferido, a forma de escolha é feita com base
+em uma estratégia definida no tempo de inicialização, são apresentadas algumas estratégia na
+seção 3.2. A saída deve ser o identificador de um nodo NUMA ou vazio, caso nenhum nodo seja
+o preferido.
+Etapa 3: Atribuição de um nodo NUMA à uma tarefa A terceira etapa recebe um nodo
+preferido pela etapa anterior3 e verifica se esse nodo está disponível para receber mais tarefas, se
+sim aloca então a tarefa no nodo caso contrário escolhe um nodo com base em alguma política
+de balanceamento de carga. É importante verificar a disponibilidade do nodo NUMA preferido,
+pois caso contrário acontece um fenômeno interessante de todas as tarefas ficarem no mesmo
+nodo NUMA e os outros ficam ociosos.
+Diagrama de execução O diagrama de execução 3.1 apresenta de forma visual o funcionamento
+do algoritmo, podemos classificar cada bloco em umas das etapas apresentada anteriormente. Os
+blocos 1,2,3 fazem parte da etapa 1 3, blocos 5,4,6 pertence à etapa 2 3 e os blocos 7,8,9,10 a
+etapa 3 3.

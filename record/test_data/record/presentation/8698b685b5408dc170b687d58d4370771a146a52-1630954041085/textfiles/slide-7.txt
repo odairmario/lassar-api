@@ -1,0 +1,8 @@
+LISTA DE SÍMBOLOS
+α alfa, primeira letra do alfabeto grego
+β beta, segunda letra do alfabeto grego
+γ gama, terceira letra do alfabeto grego
+ω ômega, última letra do alfabeto grego
+π pi
+τ Tempo de resposta do sistema
+θ Ângulo de incidência do raio luminoso

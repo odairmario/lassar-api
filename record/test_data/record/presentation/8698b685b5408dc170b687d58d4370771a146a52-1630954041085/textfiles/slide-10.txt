@@ -1,0 +1,13 @@
+10
+Figura 1.1: Representação da arquitetura NUMA
+Os bancos de dados em memórias tem como características fazer cache de de dados em
+memória para re utilizar em consultas futuras, dado essa característica a localidade da memória e
+o escalonamento das tarefas se torna crucial para o desempenho do banco de dados.
+A figura 1.2 demostra os impactos do efeito NUMA no MonetDB, que é um SGDB
+relacional, em memória e colunar. foi testados em três casos, SO é o caso que o sistema
+operacional faz o escalonamento, Denso é o caso em que as threads estão no mesmo nodo NUMA
+e só faz acesso local e por fim Esparso que as threads estão no mesmo nodo NUMA, mas a
+memória está em outro nodo, ou seja só realiza acesso remoto. Como observado na figura forma
+que é distribuído as threads nos nodos NUMAS impacta o tempo de execução de cada query.
+A solução proposta neste trabalho consiste em um escalonador dinâmico para banco de
+dados relacionais em memória, testado no MonetDB, que avalia a similidade de endereços de

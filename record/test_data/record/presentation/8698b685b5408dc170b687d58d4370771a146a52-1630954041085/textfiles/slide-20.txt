@@ -1,0 +1,8 @@
+20
+política de balanceamento de carga Esparso A política esparsa é o oposto da política
+densa 3.3, ou seja tem como objetivo espalhar as tarefas entre todos os nodos NUMAS, de forma
+a reduzir de forma geral o acesso remoto, quando o banco de dados utiliza todos os núcleos do
+servidor, a melhor forma de minimizar o efeito NUMA é distribuir a memória entre todos os
+nodos.
+política de balanceamento de carga Aleatório A política aleatório consiste em escolher de
+forma aleatória um nodo NUMA.

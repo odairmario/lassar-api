@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<recording>
+  <id>bf0a5dbc0b893bebc8d7c76ce2a6dad2617916bf-1630953904626</id>
+  <state>published</state>
+  <published>true</published>
+  <start_time>1630953904626</start_time>
+  <end_time>1630954071775</end_time>
+  <participants>2</participants>
+  <meeting id="bf0a5dbc0b893bebc8d7c76ce2a6dad2617916bf-1630953904626" externalId="824ee5b9d6d1a467ea58bdb8e0abaf019de45db1" name="Home Room" breakout="false"/>
+  <meta>
+    <bbb-origin>Greenlight</bbb-origin>
+    <bbb-origin-server-name>bbb.c3sl.ufpr.br</bbb-origin-server-name>
+    <bbb-origin-version>master (d53cfc0)</bbb-origin-version>
+    <gl-listed>false</gl-listed>
+    <isBreakout>false</isBreakout>
+    <meetingId>824ee5b9d6d1a467ea58bdb8e0abaf019de45db1</meetingId>
+    <meetingName>Home Room</meetingName>
+  </meta>
+  <playback>
+    <format>presentation</format>
+    <link>https://bbb.c3sl.ufpr.br/playback/presentation/2.3/bf0a5dbc0b893bebc8d7c76ce2a6dad2617916bf-1630953904626</link>
+    <processing_time>39568</processing_time>
+    <duration>6016</duration>
+    <extensions>
+      <preview>
+        <images>
+          <image width="176" height="136" alt="Welcome To BigBlueButton">https://bbb.c3sl.ufpr.br/presentation/bf0a5dbc0b893bebc8d7c76ce2a6dad2617916bf-1630953904626/presentation/d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1630953904656/thumbnails/thumb-1.png</image>
+          <image width="176" height="136" alt="This slide left blank for whiteboard">https://bbb.c3sl.ufpr.br/presentation/bf0a5dbc0b893bebc8d7c76ce2a6dad2617916bf-1630953904626/presentation/d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1630953904656/thumbnails/thumb-2.png</image>
+          <image width="176" height="136" alt="This slide left blank for whiteboard">https://bbb.c3sl.ufpr.br/presentation/bf0a5dbc0b893bebc8d7c76ce2a6dad2617916bf-1630953904626/presentation/d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1630953904656/thumbnails/thumb-3.png</image>
+        </images>
+      </preview>
+    </extensions>
+    <size>2358235</size>
+  </playback>
+  <raw_size>14383580</raw_size>
+</recording>

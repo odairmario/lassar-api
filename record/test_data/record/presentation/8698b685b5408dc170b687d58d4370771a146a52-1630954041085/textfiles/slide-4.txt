@@ -1,0 +1,12 @@
+LISTA DE FIGURAS
+1.1 Representação da arquitetura NUMA. . . . . . . . . . . . . . . . . . . . . . . . 10
+1.2 Tempo sequencial de execução de cada query . . . . . . . . . . . . . . . . . . . 11
+2.1 Representação da arquitetura NUMA. . . . . . . . . . . . . . . . . . . . . . . . 12
+2.2 Representação da rede de Petri, retirado do artigo (Dominico et al., 2018) . . . . 14
+2.3 Diagrama do modelo de execução em morsel , retirado do artigo (Leis et al., 2014) 15
+3.1 Fluxograma do escalonador. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+5.1 Tempo de médio de execução de cada query . . . . . . . . . . . . . . . . . . . . 24
+5.2 Tempo de médio de execução de cada query de todas as streams . . . . . . . . . 25
+5.3 Distribuições das threads do Monetdb com o escalonamento do sistema operacional26
+5.4 distribuições das threads do MonetDB com utilizando a estratégia gulosa e política
+de balanceamento de carga densa. . . . . . . . . . . . . . . . . . . . . . . . . . 26

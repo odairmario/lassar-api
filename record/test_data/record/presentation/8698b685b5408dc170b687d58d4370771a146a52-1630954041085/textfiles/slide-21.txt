@@ -1,0 +1,29 @@
+21
+4 EXPERIMENTOS
+4.1 AMBIENTE DE EXECUÇÃO
+O ambiente de execução utilizado para validação da proposta possui as seguintes
+características:
+Memória : 132GiB
+Processador : Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz
+Load médio antes do experimento : 0.0
+Quantidade de cores : 16
+Threads por core : 1
+Frequência de relógio : 3.2 GHz
+Nodos NUMA : 2
+Memória por nodo NUMA : 64GiB
+Cores por nodo NUMA : 8
+O load médio representa que antes da execução não houve nenhuma atividade na servidora que
+possa interferir nos experimentos.
+4.1.1 Metodologia de execução
+Foi utilizado o benchmark TPC-H para validar a proposta 3. Os testes seguiram a
+especificação do TPC-H (Poess e Nambiar, 2010), foi utilizado diferentes tamanhos de banco
+de dados e em alguns casos executados os testes n vezes e feito a média aritmética e desvios
+padrão, em outros casos foi executado apenas uma vez, visto que não foi observado alterações
+nos resultados.
+Métricas As métricas definida na especificação do TPC-H (Poess e Nambiar, 2010), tempo de
+execução de cada consulta e a distribuição das tarefas nos nodos NUMA. A métrica do TPC-H na
+especificação é definido como a quantidade de consultas feita por hora pelo gerenciador de banco
+de dados, mas como foi trabalho com escala de banco de dados menores, foi utilizado a métrica
+quantidade de consultas por segundo, apenas uma divisão por 36000 e ajuda a mensurar se
+houve melhora na performance do banco. A métrica de tempo serve para entender em quais
+consultas houve melhora de desempenho e quais consultas houve piora de desempenho piorou.

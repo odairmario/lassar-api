@@ -1,0 +1,8 @@
+26
+Figura 5.3: Distribuições das threads do Monetdb com o escalonamento do sistema operacional
+Heatmap DenseGreedyAlgorithm O heatmap da figura 5.4 mostra a distribuição das tarefas
+que o algoritmo faz com a estratégia gulosa e política de balanceamento de carga denso, como
+pode ser observado, as threads não são migradas ao longo da execução e existe uma divisão entre
+os nodos NUMA.
+Figura 5.4: distribuições das threads do MonetDB com utilizando a estratégia gulosa e política de balanceamento de
+carga densa

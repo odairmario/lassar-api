@@ -1,0 +1,8 @@
+LISTA DE ACRÔNIMOS
+DINF Departamento de Informática
+PPGINF Programa de Pós-Graduação em Informática
+UFPR Universidade Federal do Paraná
+NUMA Non-uniform Memory ACCESS
+UMA Uniform Memory ACCESS
+DRAM Dynamic random-access memory
+SGDB Sistema de Gerenciadores de BAnco de Dados

@@ -1,0 +1,40 @@
+18
+Função principal O algoritmo 1 é responsável por verificar se existes novas tarefas, se sim
+então adiciona, também é responsável por remover tarefas que não estão mais ativas. A função
+permanece no laço até que receba um sinal de término do sistema operacional.
+Algoritmo 1 Função principal do escalonador
+tare f as_escalonadas ← ∅
+escalonador_ativo ← True
+while escalonador_ativo do
+tare f as_atuais ← consulta_tare f as()
+novas_tare f as ← tare f as_atuais \ tare f as_escalonadas
+tare f as_encerradas ← tare f as_escalonadas \ tare f as_atuais
+adiciona_tare f as(novas_tare f as)
+remove_tare f as(tare f as_encerradas)
+end while
+Função de adição de tarefas A função de adição de tarefas é o ponto central do escalonador,
+é nela que se calcula a similaridade das novas tarefas com as tarefas existentes, escolhe um
+nodo como preferido, verifica se o nodo está disponível e por fim aloca a tarefa em um nodo da
+arquitetura NUMA.
+Algoritmo 2 Função de adição de tarefas
+for each ti ∈ T
+novas do
+Si ← ∅
+for each tj ∈ T
+atuais do
+si,j ←
+|M(ti)∩M(tj)|
+|M(ti)∪M(tj)|
+Si ← Si ∪ {si,j }
+end for
+nodo_pre f erido ← escolhe_nodo(Si)
+if veri f ica_nodo(nodo_pre f erido) then
+nodo ← nodo_pre f erido
+else
+nodo ← load_balance()
+end if
+aloca_nodo(ti,nodo)
+Tatuais ← Tatuais ∪ {ti}
+end for
+Estruturas de dados utilizados no escalonado São utilizados algumas estruturas de dados no
+escalonador para armazenar informações do escalonador e das tarefas já tratadas e novas tarefas.

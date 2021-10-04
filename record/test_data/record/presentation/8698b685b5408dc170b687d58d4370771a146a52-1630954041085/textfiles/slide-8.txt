@@ -1,0 +1,22 @@
+SUMÁRIO
+1 INTRODUÇÃO . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+2 FUNDAMENTAÇÃO TEÓRICA. . . . . . . . . . . . . . . . . . . . . . . . . 12
+2.1 ARQUITETURA NUMA. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+2.1.1 Efeito NUMA . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+2.1.2 MonetDB . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+2.2 TRABALHOS RELACIONADOS . . . . . . . . . . . . . . . . . . . . . . . . . 14
+3 PROPOSTA . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+3.1 DETALHES DE IMPLEMENTAÇÃO . . . . . . . . . . . . . . . . . . . . . . . 17
+3.1.1 Algoritmos implementados . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+3.2 ESTRATÉGIAS DE SELEÇÃO DE NODO NUMA. . . . . . . . . . . . . . . . 19
+3.3 POLíTICAS DE BALANCEAMENTO DE CARGA . . . . . . . . . . . . . . . 19
+4 EXPERIMENTOS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+4.1 AMBIENTE DE EXECUÇÃO . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+4.1.1 Metodologia de execução . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+4.2 BENCHMARK TPC-H . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+5 RESULTADOS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+5.1 TEMPO DE EXECUÇÃO DAS CONSULTAS . . . . . . . . . . . . . . . . . . 24
+5.2 DISTRIBUIÇÃO DE TAREFAS NOS NODOS NUMAS . . . . . . . . . . . . . 25
+6 CONCLUSÃO . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+6.1 TRABALHOS FUTUROS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+REFERÊNCIAS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28

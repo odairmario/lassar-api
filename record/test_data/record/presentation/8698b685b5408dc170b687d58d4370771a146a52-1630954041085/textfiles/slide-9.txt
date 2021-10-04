@@ -1,0 +1,15 @@
+9
+1 INTRODUÇÃO
+A arquitetura NUMA (Non Uniform Memory Access), consiste de um modelo multi-
+processadores, no qual cada processador possui diferentes latências de acesso aos bancos de
+memória. A figura 2.1 representa a arquitetura NUMA,
+O sistema operacional abstrai os nodos NUMA como se fosse um único nodo, isso se
+deve para permitir a generalização das aplicações, visto que as aplicações vão enxergar como um
+único processador e uma memória independente da quantidade real de processadores e memória,
+essa abstração possui um custo, o núcleo do SO é responsável por distribuir as tarefas entre
+os nodos NUMAS, o escalonador scheduler realiza esse trabalho. No entanto nem sempre as
+políticas de escalonamento beneficiam a performances das aplicações em arquitetura NUMA, isso
+se deve devido a política adotada pelo escalonador, por exemplo se a política for de distribuição
+de tarefas de forma igual entre os nodos processadores, vai ocasionar um maior acesso remoto
+aos dados, gerando uma latência maior para acesso a memória, em contra partida tudo vai ficar
+bem distribuído, esse fenômeno é chamado de efeito numa (numa aware).

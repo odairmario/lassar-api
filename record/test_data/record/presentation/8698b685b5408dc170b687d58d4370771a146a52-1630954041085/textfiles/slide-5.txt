@@ -1,0 +1,2 @@
+LISTA DE TABELAS
+5.1 Queries por segundo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24

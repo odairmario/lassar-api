@@ -1,0 +1,8 @@
+11
+Figura 1.2: Tempo sequencial de execução de cada query
+memórias para decidir em qual nodo NUMA que cada tarefas deve ser atribuída. O algoritmo
+aceita diferentes estratégia de escalonamento e de balanceamento de carga.
+O trabalho está organizado da seguinte forma: capítulo 1 introdução, Capítulo 2
+fundamentação teórica, Capítulo 3 proposta e descrição do algoritmo desenvolvido, Capítulo 4
+Experimentos executado para validação da proposta, Capítulo 5 resultados dos experimentos e
+por fim Capítulo 6 conclusão.

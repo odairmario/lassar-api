@@ -1,0 +1,18 @@
+23
+5 RESULTADOS
+Foram executados os experimentos com os seguintes algoritmos:
+SO : escalonador do sistema operacional, serve como base de comparação
+DenseGreedyAlgorithm : Escalonador proposto utilizando a estratégia gulosa 3.2 e política de
+balanceamento densa ??.
+DenseGeneralAlgorithm : Escalonador proposto utilizando a estratégia do nodo correspon-
+dente 3.2 e política de balanceamento densa ??.
+RandomGreedyAlgorithm : Escalonador proposto utilizando a estratégia gulosa 3.2 e política
+de balanceamento densa ??.
+RandomGeneralAlgorithm : Escalonador proposto utilizando a estratégia do nodo correspon-
+dente 3.2 e política de balanceamento densa ??.
+SparseGreedyAlgorithm : Escalonador proposto utilizando a estratégia gulosa 3.2 e política
+de balanceamento densa ??.
+SparseGeneralAlgorithm : Escalonador proposto utilizando a estratégia do nodo correspon-
+dente 3.2 e política de balanceamento densa ??.
+Tabela de desempenho TPC-H A tabela 5.1 apresenta os desempenhos dos algoritmos nas
+métricas definido pela especificação do TPC-H.

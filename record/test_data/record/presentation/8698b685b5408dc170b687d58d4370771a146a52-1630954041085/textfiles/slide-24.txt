@@ -1,0 +1,29 @@
+24
+Algoritmo Teste TPC-H Queries por segundos
+DenseGeneralAlgorithm throughput 4.562
+power 2.369
+DenseGreedyAlgorithm throughput 5.232
+power 4.137
+RandomGeneralAlgorithm throughput 4.758
+power 3.989
+RandomGreedyAlgorithm throughput 4.617
+power 4.022
+Sistema operacional throughput 4.532
+power 4.075
+SparseGeneralAlgorithm throughput 4.911
+power 4.112
+SparseGreedyAlgorithm throughput 4.855
+power 3.968
+Tabela 5.1: Queries por segundo
+5.1 TEMPO DE EXECUÇÃO DAS CONSULTAS
+O tempo de execução das consultas não é a métrica mais adequada, quando se trata do
+benchmark TPC-H, visto que possui métricas próprias (Poess e Nambiar, 2010), mas é relevante
+para nossos objetivo, visto que é possível identificar em quais consultas houve melhora ou piora.
+Tempo de execução das consultas do power test A figura 5.1 mostra o tempo de execução
+de cada query do benchmark TPC-H, o algoritmo DenseGreedyAlgorithm se saiu melhor em
+quase todas queries. É importante observar que houve alguns outline na execução do sistema
+operacional, principalmente na query 9, 13, 14, 18 e 21, o heatmap do sistema operacional 5.3
+pode ajudar a entender o que aconteceu com essas queries.
+Figura 5.1: Tempo de médio de execução de cada query
+Tempo de execução das consultas do throughput test A figura 5.2 evidencia um desvio
+padrão alto em todas as consultas, isso se deve a concorrência de de cache do processador

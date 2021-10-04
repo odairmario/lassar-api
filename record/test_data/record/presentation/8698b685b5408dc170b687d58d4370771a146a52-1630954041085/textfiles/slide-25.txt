@@ -1,0 +1,23 @@
+25
+pela múltiplas streams. Dado o resultado do gráfico não é possível concluir se houve melhora
+significativa no tempo das queries devido ao alto desvio padrão, para avaliar a capacidade de
+processamento paralelo deve ser utilizado a métrica definida pela especificação do TPC-H (Poess
+e Nambiar, 2010).
+Figura 5.2: Tempo de médio de execução de cada query de todas as streams
+5.2 DISTRIBUIÇÃO DE TAREFAS NOS NODOS NUMAS
+O ponto central do escalonamento é a distribuição das tarefas nos nodos NUMAS, então
+é importante observar gráficos que demonstram a distribuição das threads, foi utilizado o modelo
+de gráfico heatmap para representar a distribuição de tarefas nos nodos NUMAS, o tempo que foi
+observado, em segundos, o eixo Y representa os PIDS da threads e o z o id do nodo NUMA, no
+caso 0 ou 1. O framework utilizado para geração dos gráficos do presente trabalho não permite
+heatmap com cores sequências, portanto todos os próximos heatmaps estão com a barra de cor
+em escala contínua, então deve ser compreendido como escala sequencial.
+Foi escolhido a query 9 para observar a distribuição das tarefas nos nodos NUMA, por
+causa do comportamento fora da curva em 5.1. Foram selecionados somente o heatmap do
+sistema operacional e o do algoritmo DenseGreedyAlgorithm que foi o que se saiu melhor, as
+outras variações do algoritmo obteve resultados semelhantes então para não poluir o resultado
+foi deixado apenas o melhor resultado.
+Heatmap Sistema operacional O heatmap do sistema operacional 5.3 mostra que o escalonador
+do sistema operacional não fixa as tarefas em um nodo NUMA, migrando as tarefas entre os nodos
+NUMA a cada intervalo de tempo. O comportamento do escalonador do sistema operacional
+justifica o pérsimo desemepnho da consulta 9 no gráfico 5.1
