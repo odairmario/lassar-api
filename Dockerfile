@@ -42,6 +42,6 @@ run chown app:app -R /home/app
 run chown app:app -R /home/app/media
 USER app
 
-#COPY ./bbbrecord_api /app/bbbrecord_api
+#COPY ./lassar-api /app/lassar-api
 
 CMD ["./entrypoint.sh"]

@@ -3,9 +3,9 @@ import os
 from celery import Celery
 
 # se the default django settings module for the celery program
-os.environ.setdefault('DJANGO_SETTINGS_MODULE','bbbrecord_api.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE','lassarAPI.settings')
 
-app = Celery('bbbrecord_api')
+app = Celery('lassarAPI')
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
