@@ -7,8 +7,8 @@ import time
 
 import requests
 from asgiref.sync import async_to_sync
-from bbbrecord_api.celery import app
-from bbbrecord_api.settings import (MEDIA_ROOT, RECORDS_PATH,
+from lassarAPI.celery import app
+from lassarAPI.settings import (MEDIA_ROOT, RECORDS_PATH,
                                     VIDEO_PROCESSOR_PATH,
                                     VIDEO_PROCESSOR_THREADS)
 from celery import shared_task

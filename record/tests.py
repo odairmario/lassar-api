@@ -7,7 +7,7 @@ from unittest import mock
 
 import requests
 import responses
-from bbbrecord_api.settings import VIDEO_PROCESSOR_PATH
+from lassarAPI.settings import VIDEO_PROCESSOR_PATH
 from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
