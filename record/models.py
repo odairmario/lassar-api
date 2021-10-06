@@ -10,9 +10,9 @@ class Record(models.Model):
     status_choices = models.IntegerChoices("Status_Choices","Pending Processing Completed Error NotFound")
 
     status = models.IntegerField(choices=status_choices.choices,default=status_choices.Pending)
-    meeting_id = models.CharField(max_length=64,primary_key=True)
+    meeting_id = models.CharField(max_length=128,primary_key=True)
     video = models.FilePathField(blank=True)
-    task_id = models.CharField(max_length=64,blank=True)
+    task_id = models.CharField(max_length=128,blank=True)
     def is_processed(self):
         """check if record is already processed
         :returns: True if processed and False if not

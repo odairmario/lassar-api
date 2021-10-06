@@ -21,11 +21,11 @@ class RecordDownloadSerializer(serializers.ModelSerializer):
 
 
 class RecordSocketSerializer(serializers.Serializer):
-    meeting_id = serializers.CharField(max_length=64)
+    meeting_id = serializers.CharField(max_length=128)
     status = serializers.IntegerField()
-    status_message = serializers.CharField(max_length=64)
+    status_message = serializers.CharField(max_length=128)
 
 class RecordPostSerializer(serializers.Serializer):
     url = serializers.URLField()
 class RecordRequestSerializer(serializers.Serializer):
-    meeting_id = serializers.CharField(max_length=64)
+    meeting_id = serializers.CharField(max_length=128)

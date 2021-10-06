@@ -43,7 +43,8 @@ def process_video(processor_path,meeting_path,video_output):
     process a video
     """
     output_video_path = os.path.join(video_output,"{}.mp4".format(time.time()))
-    cmd = "node {} -i {} -t {} -o {}".format(processor_path,VIDEO_PROCESSOR_THREADS, meeting_path,output_video_path)
+    cmd = "node {} -i {} -o {} -t {}".format(processor_path, meeting_path,output_video_path,VIDEO_PROCESSOR_THREADS)
+    print(cmd)
     with sp.Popen(cmd.split()) as process:
         process.wait()
 
@@ -83,13 +84,17 @@ def start_process_record(record_id):
     :returns: TODO
 
     """
-    meeting_path = os.path.join(RECORDS_PATH,record_id)
+    print("------------------")
+    print(RECORDS_PATH,record_id)
+    meeting_path = os.path.join("/bbb/",record_id.replace(" ",""))
     # check if meeting exists
 
     if not os.path.exists(meeting_path):
-        record = Record.objects.get(meeting_id=record);
+        record = Record.objects.get(meeting_id=record_id);
+        print("record not found ",meeting_path)
         record.status = record.status_choices.NotFound
         record.save()
+        return None
     else:
         async_result = process_video.apply_async(
                 (VIDEO_PROCESSOR_PATH,meeting_path,MEDIA_ROOT),
